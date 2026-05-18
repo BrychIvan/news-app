@@ -1,38 +1,77 @@
-# vue-module-2
+## Getting Started
 
-This template should help get you started developing with Vue 3 in Vite.
+### Prerequisites
 
-## Recommended IDE Setup
+- Node.js 20.19.0 or higher
+- npm or yarn package manager
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### Installation
 
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+1. Clone or navigate to the project directory
+2. Install dependencies:
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Development
 
-```sh
+Start the development server:
+```bash
 npm run dev
 ```
 
-### Compile and Minify for Production
+The application will be available at `http://localhost:5173`
 
-```sh
+### Production Build
+
+Build for production:
+```bash
 npm run build
 ```
+
+Preview production build:
+```bash
+npm run preview
+```
+
+## Configuration
+
+### NewsAPI Setup
+
+To use real news data:
+
+1. Visit [NewsAPI.org](https://newsapi.org/) and sign up for a free account
+2. Copy your API key
+3. Open `src/App.vue` and replace:
+```javascript
+const API_KEY = 'demo'
+```
+with:
+```javascript
+const API_KEY = 'your_api_key_here'
+```
+
+## Project Structure
+
+```
+src/
+├── App.vue                 # Main application component
+├── main.js                 # Application entry point
+└── components/
+    ├── NewsCard.vue       # Individual news article card
+    ├── NewsFilters.vue    # Search and filter controls
+    └── NewsLoader.vue     # Loading indicator
+```
+
+## Available Languages
+
+- English
+- Ukrainian
+
+## Default Demo Data
+
+When API key is not configured, the app displays sample news articles for demonstration purposes.
+
+## Author
+
+Created for educational purposes
